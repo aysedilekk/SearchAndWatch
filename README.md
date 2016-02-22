@@ -1,5 +1,5 @@
 
-# Creating Subtitle of News
+# Subtitle of News
 The aim of this project is creating the subtitles of a news videos.
 
 ##Requirements
