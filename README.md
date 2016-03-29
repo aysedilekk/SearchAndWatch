@@ -1,12 +1,11 @@
 
 # Subtitle of News
-The aim of this project is creating the subtitles of a news videos.
+The aim of this project is to convert the audio of news videos to text. After splitting the text with using topic detection, summarizing and searching part will be done. According to searching term, releated part of new video will be opened.
 
 ##Requirements
 
 1. [Speech Recognition](https://pypi.python.org/pypi/SpeechRecognition)
 2. [PyAudio](https://pypi.python.org/pypi/SpeechRecognition/)
-3. [NLTK](http://www.nltk.org/)
 
 ##Requirements
 
@@ -16,7 +15,7 @@ The aim of this project is creating the subtitles of a news videos.
 
 * Installing and learning tools :white_check_mark:
 * Converting audio to text :white_check_mark:
-* Normalization
-* Making samples by using tools 
-* Generating subtitle
+* Topic detection
+* Searching and Summarizing
+* Returm related part of video according to searching word
 * Testing
