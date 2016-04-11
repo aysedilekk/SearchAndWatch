@@ -15,7 +15,7 @@ The aim of this project is to convert the audio of news videos to text. After sp
 
 * Installing and learning tools :white_check_mark:
 * Converting audio to text :white_check_mark:
-* Topic detection
-* Searching and Summarizing
+* Topic detection :white_check_mark:
+* Searching keyword :white_check_mark:
 * Return related part of video according to searching word
 * Testing
