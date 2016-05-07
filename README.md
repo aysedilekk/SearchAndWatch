@@ -1,5 +1,5 @@
 
-# Subtitle for News
+# Search and Watch
 The aim of this project is to convert the audio of news videos to text. After splitting the text with using topic detection, searching part will be done. According to searching term, releated part of new video will be opened.
 
 ##Requirements
