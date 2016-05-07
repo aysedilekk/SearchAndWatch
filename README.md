@@ -1,6 +1,6 @@
 
 # Search and Watch
-This project is releated to Natural Languages Processing and Information Retrieval.
+This project is releated to Natural Languages Processing and Information Retrieval. \\
 The aim of this project is to convert the audio of news videos to text. After splitting the text with using topic detection, searching part will be done. According to searching term, releated part of new video will be opened.
 
 ##Requirements
@@ -20,7 +20,7 @@ The aim of this project is to convert the audio of news videos to text. After sp
 * Installing and learning tools :white_check_mark:
 * Converting audio to text :white_check_mark:
 * Topic detection :white_check_mark:
-* İndexing texts to Solr :white_check_mark:
+* Indexing texts to Solr :white_check_mark:
 * Doing an interface by using Web2Py :white_check_mark:
 * Searching keyword :white_check_mark:
 * Return related part of video according to searching word :white_check_mark:
