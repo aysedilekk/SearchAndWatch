@@ -1,0 +1,845 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.KeyError'> 0"
+p3
+sS'layer'
+p4
+S'/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py/applications/nlpp/views/default/search.html'
+p5
+sS'code'
+p6
+S'response.write(\'<!DOCTYPE html>\\n<html lang="en">\\n  <head>\\n    <meta charset="utf-8">\\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\\n    <meta name="viewport" content="width=device-width, initial-scale=1">\\n    <title>Search New</title>\\n    \\n    <link href=\\\'http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,400italic,600,300italic,300|Oswald:400,300,700\\\' rel=\\\'stylesheet\\\' type=\\\'text/css\\\'>\\n    <!-- Bootstrap -->\\n    <link href="\', escape=False)\nresponse.write(URL(\'static/template\',\'css/bootstrap.min.css\'))\nresponse.write(\'" rel="stylesheet">\\n    <link href="\', escape=False)\nresponse.write(URL(\'static/template\',\'css/font-awesome.min.css\'))\nresponse.write(\'" rel="stylesheet">\\n\\n\\n    <link href="\', escape=False)\nresponse.write(URL(\'static/template\',\'css/owl.carousel.css\'))\nresponse.write(\'" rel="stylesheet">\\n    <link href="\', escape=False)\nresponse.write(URL(\'static/template\',\'css/owl.theme.css\'))\nresponse.write(\'" rel="stylesheet">\\n    <link href="\', escape=False)\nresponse.write(URL(\'static/template\',\'css/owl.transitions.css\'))\nresponse.write(\'" rel="stylesheet">\\n\\n    <link href="\', escape=False)\nresponse.write(URL(\'static/template\',\'css/style.css\'))\nresponse.write(\'" rel="stylesheet">\\n\\n  </head>\\n\\n<section class="blog" id="blog" style="margin-top: -50px;">\\n            <div class="container">\\n            <div class="row">\\n                    <div class="col-md-12">\\n                        <div class="section-title st-center">\\n                            <h3>News</h3>\\n                            <p>Search Results[\', escape=False)\nresponse.write(search_result[\'response\'][\'numFound\'])\nresponse.write(\']\\n                            </p>\\n                        </div>\\n                    </div>\\n                </div>\\n\\n                <div class="row">\\n                    <div class="col-md-12">\\n\\n                \', escape=False)\nfor result in search_result[\'response\'][\'docs\']:\n    response.write(\'\\n                        <div class="blog-post">\\n                            <div class="post-thumb">\\n\\n                            </div>\\n                            \\n                            <strong>\', escape=False)\n    response.write(result[0][\'topic\'].title())\n    response.write(\'</strong>\\n                            <div class="post-content">\\n                                <p>\', escape=False)\n    response.write(" ".join(result[\'content\'])[:100])\n    response.write(\'.. <a href="\', escape=False)\n    response.write(URL(\'show_detail\', args=result[\'id\']))\n    response.write(\'" class="more-link">Devam\\xc4\\xb1n\\xc4\\xb1 oku.. <span class="meta-nav">&rarr;</span></a></p>\\n                            </div>\\n                        </div>\\n                        \', escape=False)\n    pass\nresponse.write(\'\\n                    </div>\\n\\n\\n            <nav>\\n            <ul class="pagination pagination-sm">\\n                \', escape=False)\nimport math\nresponse.write(\' \', escape=False)\nfor i in range(int(math.ceil(search_result[\'response\'][\'numFound\']/10.0))):\n    response.write(\'\\n                <li \', escape=False)\n    if i==request.args(0, cast=int)-1:\n        response.write(\' class="active" \', escape=False)\n        pass\n    response.write(\'>\\n                    <a href="\', escape=False)\n    response.write(URL(\'default\', \'search\', args=i+1))\n    response.write(\'?searchQuery=\', escape=False)\n    response.write(request.vars.searchQuery)\n    if request.vars.category:\n        response.write(\'&category=\', escape=False)\n        response.write(request.vars.category)\n        pass\n    response.write(\'">\', escape=False)\n    response.write(i+1)\n    response.write(\'</a>\\n                </li>\\n                \', escape=False)\n    pass\nresponse.write(\'\\n\\n            </ul>\\n        </nav>\\n\\n                    \\n                </div>\\n            </div>\\n        </section>\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__hash__'
+p12
+S"<method-wrapper '__hash__' of exceptions.KeyError object>"
+p13
+sS'__setattr__'
+p14
+S"<method-wrapper '__setattr__' of exceptions.KeyError object>"
+p15
+sS'__reduce_ex__'
+p16
+S'<built-in method __reduce_ex__ of exceptions.KeyError object>'
+p17
+sS'__getslice__'
+p18
+S"<method-wrapper '__getslice__' of exceptions.KeyError object>"
+p19
+sS'__getitem__'
+p20
+S"<method-wrapper '__getitem__' of exceptions.KeyError object>"
+p21
+sS'__setstate__'
+p22
+S'<built-in method __setstate__ of exceptions.KeyError object>'
+p23
+sS'args'
+p24
+S'(0,)'
+p25
+sS'__reduce__'
+p26
+S'<built-in method __reduce__ of exceptions.KeyError object>'
+p27
+sS'__str__'
+p28
+S"<method-wrapper '__str__' of exceptions.KeyError object>"
+p29
+sS'__format__'
+p30
+S'<built-in method __format__ of exceptions.KeyError object>'
+p31
+sS'__getattribute__'
+p32
+S"<method-wrapper '__getattribute__' of exceptions.KeyError object>"
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.KeyError'>"
+p35
+sS'__unicode__'
+p36
+S'<built-in method __unicode__ of exceptions.KeyError object>'
+p37
+sS'__delattr__'
+p38
+S"<method-wrapper '__delattr__' of exceptions.KeyError object>"
+p39
+sS'__subclasshook__'
+p40
+S'<built-in method __subclasshook__ of type object>'
+p41
+sS'__repr__'
+p42
+S"<method-wrapper '__repr__' of exceptions.KeyError object>"
+p43
+sS'__dict__'
+p44
+S'{}'
+p45
+sS'__sizeof__'
+p46
+S'<built-in method __sizeof__ of exceptions.KeyError object>'
+p47
+sS'__doc__'
+p48
+S"'Mapping key not found.'"
+p49
+sS'__init__'
+p50
+S"<method-wrapper '__init__' of exceptions.KeyError object>"
+p51
+sS'__new__'
+p52
+S'<built-in method __new__ of type object>'
+p53
+ssS'evalue'
+p54
+S'0'
+sS'request'
+p55
+cgluon.html
+XML_unpickle
+p56
+(S's\xb1o\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>nlpp</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>3</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">Tawk_565e0021aad22388665e7fa6</td><td style="vertical-align:top;">:</td><td><div>vs32.tawk.to:443::0<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3959ac40-3ba9-44e5-a948-f0bde287408d<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_nlp</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-5cbe58db-0d6f-4ff7-8123-68fb0cc7d49d<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_nlpp</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3818c8b5-7808-4488-a22f-06d15afcd3a2<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_storiesss</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-72974d30-1be7-4cbc-8099-836c869fd085<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-cb12ffce-40aa-4250-b0ca-6ee2f19d6d80<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>__tawkuuid=e::127.0.0.1::D0foWhO8ZMPfLfYz3BGeoBrAzzQ+x+zj3QO/JypSCTlUws6oVJhNJWv1XCHe3X6y::2; Tawk_565e0021aad22388665e7fa6=vs32.tawk.to:443::0; session_id_nlp=127.0.0.1-5cbe58db-0d6f-4ff7-8123-68fb0cc7d49d; session_id_welcome=127.0.0.1-cb12ffce-40aa-4250-b0ca-6ee2f19d6d80; session_id_storiesss=127.0.0.1-72974d30-1be7-4cbc-8099-836c869fd085; session_id_nlpp=127.0.0.1-3818c8b5-7808-4488-a22f-06d15afcd3a2; session_id_admin=127.0.0.1-3959ac40-3ba9-44e5-a948-f0bde287408d</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/nlpp/default/search/4?searchQuery=ve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.86 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/nlpp/default/search/3</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div>searchQuery=ve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>39919</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>ayse-linux</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/nlpp/&#x27;, &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/nlp/&#x27;, &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/admin/&#x27;, &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/storiesss/&#x27;, &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/welcome/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x7f81938ff248: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;127.0.1.1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;scheduler_groups&#x27;: None, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;ayse-linux&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: True, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;1&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>__tawkuuid=e::127.0.0.1::D0foWhO8ZMPfLfYz3BGeoBrAzzQ+x+zj3QO/JypSCTlUws6oVJhNJWv1XCHe3X6y::2; Tawk_565e0021aad22388665e7fa6=vs32.tawk.to:443::0; session_id_nlp=127.0.0.1-5cbe58db-0d6f-4ff7-8123-68fb0cc7d49d; session_id_welcome=127.0.0.1-cb12ffce-40aa-4250-b0ca-6ee2f19d6d80; session_id_storiesss=127.0.0.1-72974d30-1be7-4cbc-8099-836c869fd085; session_id_nlpp=127.0.0.1-3818c8b5-7808-4488-a22f-06d15afcd3a2; session_id_admin=127.0.0.1-3959ac40-3ba9-44e5-a948-f0bde287408d</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/nlpp/default/search/4?searchQuery=ve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.86 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>ayse-linux</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/nlpp/default/search/3</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div>searchQuery=ve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>39919</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/nlpp/default/search/3?searchQuery=ve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>ayse-linux</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.13.4-stable+timestamp.2015.12.26.04.59.39</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7f8197bcd1e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x7f819392b940&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7f8178dd5050&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7f8197bcd1e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x7f819392b940&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7f8178dd5050&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py/applications/nlpp/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>search</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/nlpp/&#x27;, &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/nlp/&#x27;, &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/admin/&#x27;, &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/storiesss/&#x27;, &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/welcome/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x7f81938ff248: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;127.0.1.1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;scheduler_groups&#x27;: None, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;ayse-linux&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: True, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;1&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>ayse-linux</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.13.4-stable+timestamp.2015.12.26.04.59.39</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2016, 5, 12, 18, 46, 11, 391362)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div>3</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/nlpp/default/search/3</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2016, 5, 12, 15, 46, 11, 391394)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7f8195b8ac50&gt;</div></td></tr></table></div>'
+tRp57
+sS'frames'
+p58
+(lp59
+(dp60
+S'file'
+p61
+S'/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py/gluon/restricted.py'
+p62
+sS'dump'
+p63
+(dp64
+S'environment'
+p65
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p66
+sS'ccode'
+p67
+S'<code object <module> at 0x7f8178e78730, file "/...ications/nlpp/views/default/search.html", line 1>'
+p68
+ssS'lnum'
+p69
+I227
+sS'lines'
+p70
+(dp71
+I224
+S'            ccode = code'
+p72
+sI225
+S'        else:'
+p73
+sI226
+S'            ccode = compile2(code, layer)'
+p74
+sI227
+S'        exec ccode in environment'
+p75
+sI228
+S'    except HTTP:'
+p76
+sI229
+S'        raise'
+p77
+sI230
+S'    except RestrictedError:'
+p78
+sI231
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p79
+sI222
+S'    try:'
+p80
+sI223
+S'        if isinstance(code, types.CodeType):'
+p81
+ssS'call'
+p82
+S'(code=\'response.write(\\\'<!DOCTYPE html>\\\\n<html lang="en"...       </div>\\\\n        </section>\\\', escape=False)\', environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=\'/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/nlpp/views/default/search.html\')'
+p83
+sS'func'
+p84
+S'restricted'
+p85
+sa(dp86
+g61
+S'/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py/applications/nlpp/views/default/search.html'
+p87
+sg63
+(dp88
+S'href'
+p89
+S'undefined'
+p90
+sS'link'
+p91
+g90
+sS'rel'
+p92
+g90
+ssg69
+I18
+sg70
+(dp93
+I9
+S'response.write(\'" rel="stylesheet">\\n    <link href="\', escape=False)'
+p94
+sI10
+S"response.write(URL('static/template','css/owl.transitions.css'))"
+p95
+sI11
+S'response.write(\'" rel="stylesheet">\\n\\n    <link href="\', escape=False)'
+p96
+sI12
+S"response.write(URL('static/template','css/style.css'))"
+p97
+sI13
+S'response.write(\'" rel="stylesheet">\\n\\n  </head>\\n\\n<section class="blog" id="blog" style="margin-top: -50px;">\\n            <div class="container">\\n            <div class="row">\\n                    <div class="col-md-12">\\n                        <div class="section-title st-center">\\n                            <h3>News</h3>\\n                            <p>Search Results[\', escape=False)'
+p98
+sI14
+S"response.write(search_result['response']['numFound'])"
+p99
+sI15
+S'response.write(\']\\n                            </p>\\n                        </div>\\n                    </div>\\n                </div>\\n\\n                <div class="row">\\n                    <div class="col-md-12">\\n\\n                \', escape=False)'
+p100
+sI16
+S"for result in search_result['response']['docs']:"
+p101
+sI17
+S'    response.write(\'\\n                        <div class="blog-post">\\n                            <div class="post-thumb">\\n\\n                            </div>\\n                            \\n                            <strong>\', escape=False)'
+p102
+sI18
+S"    response.write(result[0]['topic'].title())"
+p103
+sI19
+S'    response.write(\'</strong>\\n                            <div class="post-content">\\n                                <p>\', escape=False)'
+p104
+sI20
+S'    response.write(" ".join(result[\'content\'])[:100])'
+p105
+sI21
+S'    response.write(\'.. <a href="\', escape=False)'
+p106
+sI22
+S"    response.write(URL('show_detail', args=result['id']))"
+p107
+sI23
+S'    response.write(\'" class="more-link">Devam\\xc4\\xb1n\\xc4\\xb1 oku.. <span class="meta-nav">&rarr;</span></a></p>\\n                            </div>\\n                        </div>\\n                        \', escape=False)'
+p108
+sI24
+S'    pass'
+p109
+sI25
+S'response.write(\'\\n                    </div>\\n\\n\\n            <nav>\\n            <ul class="pagination pagination-sm">\\n                \', escape=False)'
+p110
+sI26
+S'import math'
+p111
+sI27
+S"response.write(' ', escape=False)"
+p112
+sI28
+S"for i in range(int(math.ceil(search_result['response']['numFound']/10.0))):"
+p113
+ssg82
+S'()'
+p114
+sg84
+S'<module>'
+p115
+sasS'pyver'
+p116
+S'Python 2.7.6: /usr/bin/python (prefix: /usr)'
+p117
+sS'session'
+p118
+g56
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp119
+sS'etype'
+p120
+S"<type 'exceptions.KeyError'>"
+p121
+sS'date'
+p122
+S'Thu May 12 18:46:11 2016'
+p123
+sS'response'
+p124
+g56
+(S's$>\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7f8178e5c228&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_nlpp</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-85d62756-efec-4f43-8737-0918ee2b99b9<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap3_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">logo</td><td style="vertical-align:top;">:</td><td><div><a class="navbar-brand" href="http://www.web2py.com/" id="web2py-logo"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Home</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/nlpp/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>My Sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>This App</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Design</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/nlpp</div></td></tr></table></div></td></tr><tr><td><div><li class="divider"></li></div></td></tr><tr><td><div><table><tr><td><div>Controller</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/nlpp/controllers/default.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>View</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/nlpp/views/default/search.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>DB Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/nlpp/models/db.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Menu Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/nlpp/models/menu.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Config.ini</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/nlpp/private/appconfig.ini</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Layout</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/nlpp/views/layout.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Stylesheet</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/nlpp/static/css/web2py-bootstrap3.css</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/nlpp/appadmin/index</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Errors</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/errors/nlpp</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>About</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/about/nlpp</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Download</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/download</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Support</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/support</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Demo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/demo_admin</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Quick Examples</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/examples/default/examples</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>FAQ</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/AlterEgo</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Videos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/videos/</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Free Applications</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/appliances</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/plugins</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2pyslices.com/</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documentation</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Online book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr></table></div></td></tr><tr><td><div><li class="divider"></li></div></td></tr><tr><td><div><table><tr><td><div>Preface</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/00</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Introduction</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/01</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Python</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/02</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Overview</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/03</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Core</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/04</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Views</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/05</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/06</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Forms and Validators</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/07</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Email and SMS</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/08</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Access Control</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/09</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Services</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/10</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Ajax Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/11</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Components and Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/12</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Deployment Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/13</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Other Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/14</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Helping web2py</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/15</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Buy web2py\'s book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://stores.lulu.com/web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Community</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Groups</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/usergroups</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Twitter</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://twitter.com/web2py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Live Chat</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://webchat.freenode.net/?channels=web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div>web2py, python, framework</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/search/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_key</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_nlpp</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py/applications/nlpp/sessions/127.0.0.1-85d62756-efec-4f43-8737-0918ee2b99b9</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>c0762cbf4baf7f9af97c051e7fcb8083</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-85d62756-efec-4f43-8737-0918ee2b99b9</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_nlpp</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>nlpp</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">subtitle</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>Nlpp</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>default/search.html</div></td></tr></table></div>'
+tRp125
+sS'locals'
+p126
+(dp127
+S'Service'
+p128
+S"<class 'gluon.tools.Service'>"
+p129
+sS'OBJECT'
+p130
+S"<class 'gluon.html.OBJECT'>"
+p131
+sS'SQLDB'
+p132
+S"<class 'pydal.base.DAL'>"
+p133
+sg118
+S'<Storage {}>'
+p134
+sS'LINK'
+p135
+S"<class 'gluon.html.LINK'>"
+p136
+sS'Auth'
+p137
+S"<class 'gluon.tools.Auth'>"
+p138
+sS'BR'
+p139
+S"<class 'gluon.html.BR'>"
+p140
+sS'local_import'
+p141
+S'<function <lambda>>'
+p142
+sS'OPTGROUP'
+p143
+S"<class 'gluon.html.OPTGROUP'>"
+p144
+sS'__package__'
+p145
+S'None'
+p146
+sS'PRE'
+p147
+S"<class 'gluon.html.PRE'>"
+p148
+sS'IS_INT_IN_RANGE'
+p149
+S"<class 'gluon.validators.IS_INT_IN_RANGE'>"
+p150
+sS'IS_LOWER'
+p151
+S"<class 'gluon.validators.IS_LOWER'>"
+p152
+sS'IS_STRONG'
+p153
+S"<class 'gluon.validators.IS_STRONG'>"
+p154
+sS'cache'
+p155
+S'<gluon.cache.Cache object>'
+p156
+sS'IS_IN_DB'
+p157
+S"<class 'gluon.validators.IS_IN_DB'>"
+p158
+sS'TAG'
+p159
+S'<gluon.html.__TAG__ object>'
+p160
+sS'SQLField'
+p161
+S"<class 'pydal.objects.Field'>"
+p162
+sS'mail'
+p163
+S'<gluon.tools.Mail object>'
+p164
+sS'BODY'
+p165
+S"<class 'gluon.html.BODY'>"
+p166
+sS'IS_DATE_IN_RANGE'
+p167
+S"<class 'gluon.validators.IS_DATE_IN_RANGE'>"
+p168
+sS'IFRAME'
+p169
+S"<class 'gluon.html.IFRAME'>"
+p170
+sS'URL'
+p171
+S'<function URL>'
+p172
+sS'__file__'
+p173
+S"'/home/aysedlk/Masa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/nlpp/views/default/search.html'"
+p174
+sS'db'
+p175
+S'<DAL uri="sqlite://storage.sqlite">'
+p176
+sS'auth'
+p177
+S'<gluon.tools.Auth object>'
+p178
+sS'P'
+S"<class 'gluon.html.P'>"
+p179
+sS'TFOOT'
+p180
+S"<class 'gluon.html.TFOOT'>"
+p181
+sS'XHTML'
+p182
+S"<class 'gluon.html.XHTML'>"
+p183
+sS'ON'
+p184
+S'True'
+p185
+sS'OL'
+p186
+S"<class 'gluon.html.OL'>"
+p187
+sS'TEXTAREA'
+p188
+S"<class 'gluon.html.TEXTAREA'>"
+p189
+sS'MENU'
+p190
+S"<class 'gluon.html.MENU'>"
+p191
+sS'search_query'
+p192
+S"'ve'"
+p193
+sS'IS_IMAGE'
+p194
+S"<class 'gluon.validators.IS_IMAGE'>"
+p195
+sS'page'
+p196
+S'3'
+sS'EM'
+p197
+S"<class 'gluon.html.EM'>"
+p198
+sS'CODE'
+p199
+S"<class 'gluon.html.CODE'>"
+p200
+sS'HTTP'
+p201
+S"<class 'gluon.http.HTTP'>"
+p202
+sS'HR'
+p203
+S"<class 'gluon.html.HR'>"
+p204
+sS'IS_DATETIME'
+p205
+S"<class 'gluon.validators.IS_DATETIME'>"
+p206
+sS'STYLE'
+p207
+S"<class 'gluon.html.STYLE'>"
+p208
+sS'LABEL'
+p209
+S"<class 'gluon.html.LABEL'>"
+p210
+sS'CLEANUP'
+p211
+S"<class 'gluon.validators.CLEANUP'>"
+p212
+sS'result'
+p213
+S"{u'_version_': 1533987135371083779, u'begin': 183, u'content': [u'\\xdcniversite Hastanelerinde bulunan sa\\u011fl...0131nt\\u0131lar\\u0131 arkada\\u015f\\u0131m\\u0131z', u'ile ilgili ayr\\u0131nt\\u0131lar\\u0131 arkada\\u...otokoll\\xfc olan t\\xfcm \\xf6zel ve \\xfcniversite', u'\\xe7ok oyunu olan t\\xfcm \\xf6zel ve \\xdcnivers...15fkanl\\u0131\\u011f\\u0131 genel sa\\u011fl\\u0131k', u'ne Kurumu Ba\\u015fkanl\\u0131\\u011f\\u0131 genel...orunlu bulunan biyometrik do\\u011frulama sistemi', u'biyometrik do\\u011frulama sistemi ertelendi ku...eme ge\\xe7mesinin zorunlu oldu\\u011fu belirtildi', u'ge\\xe7mesinin zorunda oldu\\u011fu belirtildi y...y\\xf6ntemini kullanarak hem de biyometrik kimlik', u'hem de biyometrik kimlik do\\u011frulama yap\\u0...ometrik kimlik do\\u011frulama y\\xf6ntemi ile Pro', u'kimlik do\\u011frulama y\\xf6ntemi ile provizyon...le getirilecektir ifadeleri kullan\\u0131ld\\u0131'], u'end': 246, u'id': u'6', u'topic': u'biyometrik kimlik do\\u011frulama', u'youtube': u'eW13GLKmkCY'}"
+p214
+sS'plugins'
+p215
+S'<gluon.tools.PluginManager object>'
+p216
+sS'SELECT'
+p217
+S"<class 'gluon.html.SELECT'>"
+p218
+sS'CENTER'
+p219
+S"<class 'gluon.html.CENTER'>"
+p220
+sS'urllib'
+p221
+S"<module 'urllib' from '/usr/lib/python2.7/urllib.pyc'>"
+p222
+sS'DEVELOPMENT_MENU'
+p223
+g185
+sS'__builtins__'
+p224
+S"{'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'BaseException': <type 'exceptions.BaseException'>, 'BufferError': <type 'exceptions.BufferError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'EOFError': <type 'exceptions.EOFError'>, 'Ellipsis': Ellipsis, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, ...}"
+p225
+sS'HTML'
+p226
+S"<class 'gluon.html.HTML'>"
+p227
+sS'SQLFORM'
+p228
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p229
+sS'LOAD'
+p230
+S'<function LOAD>'
+p231
+sS'redirect'
+p232
+S'<function redirect>'
+p233
+sS'FIELDSET'
+p234
+S"<class 'gluon.html.FIELDSET'>"
+p235
+sS'IS_EQUAL_TO'
+p236
+S"<class 'gluon.validators.IS_EQUAL_TO'>"
+p237
+sS'search_result_url'
+p238
+S"'http://localhost:8983/solr/nlp/select?q=ve&start=20&wt=json&indent=true'"
+p239
+sS'embed64'
+p240
+S'<function embed64>'
+p241
+sS'IS_LIST_OF'
+p242
+S"<class 'gluon.validators.IS_LIST_OF'>"
+p243
+sS'INPUT'
+p244
+S"<class 'gluon.html.INPUT'>"
+p245
+sS'EMBED'
+p246
+S"<class 'gluon.html.EMBED'>"
+p247
+sS'_'
+S'<function _>'
+p248
+sS'myconf'
+p249
+S"{'forms': {'formstyle': 'bootstrap3_inline', 'se...'you@gmail.com', 'server': 'smtp.gmail.com:587'}}"
+p250
+sS'H2'
+p251
+S"<class 'gluon.html.H2'>"
+p252
+sS'H3'
+p253
+S"<class 'gluon.html.H3'>"
+p254
+sS'AppConfig'
+p255
+S'<function AppConfig>'
+p256
+sS'H1'
+p257
+S"<class 'gluon.html.H1'>"
+p258
+sS'H6'
+p259
+S"<class 'gluon.html.H6'>"
+p260
+sS'H4'
+p261
+S"<class 'gluon.html.H4'>"
+p262
+sS'H5'
+p263
+S"<class 'gluon.html.H5'>"
+p264
+sS'UL'
+p265
+S"<class 'gluon.html.UL'>"
+p266
+sS'IS_UPPER'
+p267
+S"<class 'gluon.validators.IS_UPPER'>"
+p268
+sS'xmlescape'
+p269
+S'<function xmlescape>'
+p270
+sS'IS_TIME'
+p271
+S"<class 'gluon.validators.IS_TIME'>"
+p272
+sS'OPTION'
+p273
+S"<class 'gluon.html.OPTION'>"
+p274
+sS'TITLE'
+p275
+S"<class 'gluon.html.TITLE'>"
+p276
+sS'CRYPT'
+p277
+S"<class 'gluon.validators.CRYPT'>"
+p278
+sS'IS_EMPTY_OR'
+p279
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p280
+sS'MARKMIN'
+p281
+S"<class 'gluon.html.MARKMIN'>"
+p282
+sS'__name__'
+p283
+S"'__restricted__'"
+p284
+sS'STRONG'
+p285
+S"<class 'gluon.html.STRONG'>"
+p286
+sS'COL'
+p287
+S"<class 'gluon.html.COL'>"
+p288
+sS'service'
+p289
+S'<gluon.tools.Service object>'
+p290
+sS'SCRIPT'
+p291
+S"<class 'gluon.html.SCRIPT'>"
+p292
+sS'json'
+p293
+S"<module 'json' from '/usr/lib/python2.7/json/__init__.pyc'>"
+p294
+sS'TABLE'
+p295
+S"<class 'gluon.html.TABLE'>"
+p296
+sS'IS_IPV4'
+p297
+S"<class 'gluon.validators.IS_IPV4'>"
+p298
+sS'IS_LENGTH'
+p299
+S"<class 'gluon.validators.IS_LENGTH'>"
+p300
+sS'IS_IPV6'
+p301
+S"<class 'gluon.validators.IS_IPV6'>"
+p302
+sS'XML'
+p303
+S"<class 'gluon.html.XML'>"
+p304
+sS'B'
+S"<class 'gluon.html.B'>"
+p305
+sS'search_result'
+p306
+S'{u\'response\': {u\'docs\': [{u\'_version_\': 1533987135371083779, u\'begin\': 183, u\'content\': [u\'\\xdcniversite Hastanelerinde bulunan sa\\u011fl...0131nt\\u0131lar\\u0131 arkada\\u015f\\u0131m\\u0131z\', u\'ile ilgili ayr\\u0131nt\\u0131lar\\u0131 arkada\\u...otokoll\\xfc olan t\\xfcm \\xf6zel ve \\xfcniversite\', u\'\\xe7ok oyunu olan t\\xfcm \\xf6zel ve \\xdcnivers...15fkanl\\u0131\\u011f\\u0131 genel sa\\u011fl\\u0131k\', u\'ne Kurumu Ba\\u015fkanl\\u0131\\u011f\\u0131 genel...orunlu bulunan biyometrik do\\u011frulama sistemi\', u\'biyometrik do\\u011frulama sistemi ertelendi ku...eme ge\\xe7mesinin zorunlu oldu\\u011fu belirtildi\', u\'ge\\xe7mesinin zorunda oldu\\u011fu belirtildi y...y\\xf6ntemini kullanarak hem de biyometrik kimlik\', u\'hem de biyometrik kimlik do\\u011frulama yap\\u0...ometrik kimlik do\\u011frulama y\\xf6ntemi ile Pro\', u\'kimlik do\\u011frulama y\\xf6ntemi ile provizyon...le getirilecektir ifadeleri kullan\\u0131ld\\u0131\'], u\'end\': 246, u\'id\': u\'6\', u\'topic\': u\'biyometrik kimlik do\\u011frulama\', u\'youtube\': u\'eW13GLKmkCY\'}, {u\'_version_\': 1533987135383666688, u\'begin\': 365, u\'content\': [u\'Zekai Kafao\\u011flu da hastanede tedavi g\\xf6r...la yak\\u0131ndan ilgilendi Ailesi taraf\\u0131nda\', u\'\\u0130lgilendi\\u011fin Ailesi taraf\\u0131ndan ... babas\\u0131 ile telefonda g\\xf6r\\xfc\\u015ft\\xfc\', u"alt\\u0131eyl\\xfcl Belediye Ba\\u015fkan\\u0131 Z...t\\xfcrk Devlet Hastanesi\'nde tedavileri s\\xfcren", u"Hastanesi\'nde tedavileri s\\xfcren g\\xf6\\xe7menleri ziyaret etti", u"kazada yaralanan \\xe7ocuklara oyuncak veren Ba...evletin suzuki\'nin yanlar\\u0131nda oldu\\u011funu", u\'ins\\xfclin yanlar\\u0131nda oldu\\u011funu hissettirdi\', u"Tosuno\\u011flu Ayr\\u0131ca kazada yaralanan \\u...o\\u011flunun kazada vefat etti\\u011fini zanneden", u\'olumlu kazada vefat etti\\u011fini zanneden bab...ek ya\\u015fad\\u0131\\u011f\\u0131na inand\\u0131 vs\', u\'ile g\\xf6r\\xfc\\u015ferek ya\\u015fad\\u0131\\u011f\\u0131na inand\\u0131 ve sevindi\', u\'Ba\\u015fkan kafao\\u011flu hastane ziyareti sonras\\u0131 a\\xe7\\u0131klamalarda bulundu\', u\'\\u015fu a\\xe7\\u0131klamalarda bulundu konu\\u01...leriyle belediyeler olsun hediyesi \\u0130lkokulu\', u\'emniyet m\\xfc\\u015fterimiz kimlik tespiti ile ...or g\\xf6\\xe7men \\u0130daresi ile ilgili birimler\', u\'karesi ile ilgili birimler \\xe7al\\u0131\\u015fm...ye geldiyse ihtiya\\xe7lar\\u0131 var m\\u0131 diye\', u\'ihtiya\\xe7lar\\u0131 var m\\u0131 diye her t\\xfc...0131k\\u0131nt\\u0131 yok tedavilerde devam ediyor\'], u\'end\': 488, u\'id\': u\'17\', u\'topic\': u\'Zekai Kafao\\u011flu\', u\'youtube\': u\'I4BmGPvbx0I\'}, {u\'_version_\': 1533987135395201024, u\'begin\': 1433, u\'content\': [u"B\\xfcy\\xfck\\u015fehir Belediyesi\'nin yan\\u0131...u011fini s\\xfcrd\\xfcr\\xfcyor bu kapsamda Marmara", u\'bu kapsamda Marmara Belediyesi de Marmara Adal...0131n\\u0131 seferber ediyor Band\\u0131rma ikinci\', u\'Band\\u0131rma ikinci amat\\xf6r k\\xfcmede m\\xfc...piyonlu\\u011fu bu sezon \\u015fansa b\\u0131rakmak\', u\'bu sezon \\u015fansa b\\u0131rakmak istemiyor ta...ba\\u015fkan\\u0131 S\\xfcleyman Aksoy spora destek\', u\'imana Aksoy spora destek ve te\\u015fvik i\\xe7i...an\\u0131 ve oyuncular\\u0131 motive edip Ba\\u015f\', u\'can\\u0131m ya oyuncular\\u0131 motive edip ba\\u...rma amat\\xf6r liginde ikinci amat\\xf6r de ge\\xe7\', u"ikiz amat\\xf6r\'de ge\\xe7en sene kaybettin \\u01...u0131zda i\\u015fte adalara b\\xfcy\\xfcmesi futbol", u"Adalar\'a b\\xfcy\\xfcmesi futbol i\\u015fte bir k...arde\\u015flik bar\\u0131\\u015f birle\\u015fme Kaya", u\'birle\\u015fme kayna\\u015fma \\u015feyi Bizler d...eki b\\xfct\\xfcn imkanlar\\u0131 seferber ediyoruz\', u"bulundu\\u011fumuz \\xe7a\\u011fda i\\u015fte 357 ...da Nizami \\xf6l\\xe7\\xfclerde olan saham\\u0131zda", u\'\\xf6l\\xe7\\xfclerde olan sa\\u011f\\u0131m\\u0131z...\\xfct\\xfcn olarak d\\xfc\\u015f\\xfcnmek laz\\u0131m\', u\'Haf\\u0131z olduktan sonra belki deplasmanl\\u01...5fi yapmak i\\xe7in m\\xfcracaat edece\\u011fiz ama\', u\'Gaziantep hava I\\u015e\\u0130D \\xf6nemli tabi b...linli bir \\u015fekilde bu i\\u015fi yapmam\\u0131z\'], u\'end\': 1538, u\'id\': u\'28\', u\'topic\': u\'Marmara Adalar Spor\', u\'youtube\': u\'I4BmGPvbx0I\'}, {u\'_version_\': 1533987135416172544, u\'begin\': 3907, u\'content\': [u\'Yedinci kattan d\\xfc\\u015f\\xfcyor kendi be\\u015finci kat atmaya ba\\u015far\\u0131ya ve kurt\', u\'\\xd6l\\xfcmle ya\\u015fam aras\\u0131nda ince bir...015fad\\u0131m Yani ger\\xe7ekten ya\\u015fad\\u0131\', u\'ya\\u015fad\\u0131\\u011f\\u0131 k\\xf6t\\xfc kazay\\...fu ve \\xf6l\\xfcmden d\\xf6nd\\xfc gen\\xe7 k\\u0131z\', u"19 ya\\u015f\\u0131ndaki Ayb\\xfcke Demir oru\\xe7...ine az bir zaman kala Balkona \\xe7\\u0131kt\\u0131", u\'ne zaman kala Balkona \\xe7\\u0131kt\\u0131 ba\\u0...nci kattan a\\u015fa\\u011f\\u0131 d\\xfc\\u015ft\\xfc\', u\'hayat\\u0131m\\u0131 hat\\u0131rl\\u0131yorum ben ...onra hi\\xe7bir \\u015fey hat\\u0131rlam\\u0131yorum\', u\'hat\\u0131rlam\\u0131yorum ama Ayb\\xfcke 16 Kas\\...\\u015finci kat\\u0131n balkonuna d\\xfc\\u015ft\\xfc\', u\'balkon demiri tuttum i\\xe7in parma\\u011f\\u0131...i\\xe7in Zaten b\\xfcy\\xfck ihtimalle ben i\\xe7eri\', u\'Zaten b\\xfcy\\xfck ihtimalle ben i\\xe7eri girdi... ne o nede ailesi uzun s\\xfcre unutamayacak gibi\', u\'uzun s\\xfcre unutamayacak gibi a\\u011flama gel...rum Rabbim benim k\\u0131z\\u0131ma ikinci bir kez\', u\'Rabbim benim k\\u0131z\\u0131ma ikinci bir kez b...i y\\u0131lda 2 defa do\\u011fum g\\xfcn\\xfc olacak\', u"2 defa do\\u011fum g\\xfcn\\xfc olacak bir 21 Eyl... Haziran d\\xfc\\u015f\\xfcn\\xfcyoruz in\\u015fallah", u\'\\u0130n\\u015fallah ama yani art\\u0131k bundan ... katl\\u0131 olmayacak Nasip olursa in\\u015fallah\'], u\'end\': 4015, u\'id\': u\'39\', u\'topic\': u\'Ayb\\xfcke Demir\', u\'youtube\': u\'qGnLg6jsu1E\'}, {u\'_version_\': 1533987135400443904, u\'begin\': 89, u\'content\': [u"Kobani\'de ba\\u015flayal\\u0131m yan\\u0131ba\\u01...0131n bu taraf\\u0131ndan \\xc7\\u0131plak g\\xf6zle", u"Sinem bu taraf\\u0131ndan \\xc7\\u0131plak g\\xf6z...0131n bu taraf\\u0131ndan \\xc7\\u0131plak g\\xf6zle", u"Sinem bu taraf\\u0131ndan \\xc7\\u0131plak g\\xf6z...u0131 Kobani\'de 15 tane pantolon var onlar\\u0131", u\'defans oyunlar\\u0131\', u\'son d\\xf6nemde g\\xfc\\xe7 ve mevzi kaybeden I\\u...\\u0131k bir hedefi vurdu bir iddiaya g\\xf6re YPG\', u\'Yusuf bir iddiaya g\\xf6re YPG g\\xfc\\xe7lerinin...rak en sessiz I\\u015e\\u0130D militanlar\\u0131 22\', u\'I\\u015e\\u0130D militanlar\\u0131 iki intihar sald\\u0131r\\u0131s\\u0131 d\\xfczenledi\', u\'Cadde \\xfc\\xe7 koldan sald\\u0131ran I\\u015e\\u0130D militanlar\\u0131yla YPG \\xfcyeleri aras\\u0131\', u"YPG \\xfcyeleri aras\\u0131nda \\u015fiddetli \\xe...0131l\\u0131yor YPG Safiye g\\xf6nderdi b\\xf6lgeye", u"Darty b\\xf6lgeye I\\u015e\\u0130D g\\xfcn i\\xe7er...011fi sald\\u0131r\\u0131da \\xe7ocuk ve kad\\u0131n", u"sidik sald\\u0131r\\u0131da \\xe7ocuk ve kad\\u013...n\\u0131n ortalar\\u0131nda ele ge\\xe7irmi\\u015fti", u"Eyl\\xfcl ay\\u0131n\\u0131n ortalar\\u0131nda ele...7in b\\xfcy\\xfck bir operasyon ba\\u015flatt\\u0131", u"i\\xe7in b\\xfcy\\xfck bir operasyon ba\\u015flatt...nledi\\u011fi sald\\u0131r\\u0131larda destek verdi", u\'Sen dedi\\u011fi sald\\u0131r\\u0131larla destek ...t g\\xfc\\xe7lerinin eline ge\\xe7ti ama Kent Haber\', u\'eline ge\\xe7ti ama kenti harabeye d\\xf6vm\\xfc\\...edef al\\u0131yor militanlar kentleri kime ait 2B\', u\'insanlar kentte rejime ait iki b\\xf6lgeyi ele ...r habere g\\xf6re I\\u015e\\u0130D kasaba Sakinleri\', u\'habere g\\xf6re I\\u015e\\u0130D kasaba sakinleri...r kay\\u0131p verdi millet anlarsa G\\xfcney taraf\', u\'Mynet anlarsa G\\xfcney taraf\\u0131ndan intihar... yerel koordinasyon komiteleri de I\\u015e\\u0130D\', u"koordinasyon komiteleri de I\\u015e\\u0130D\'in k...1fru ilerledi\\u011fi iddias\\u0131nda ki\\u015fiye", u\'kulak verelim 4 toplam \\xf6l\\xfc var Ayr\\u0131...k say\\u0131da \\xf6n\\xfcnde \\u015fehrin i\\xe7eriz\', ...], u\'end\': 891, u\'id\': u\'29\', u\'topic\': u\'kobani\', u\'youtube\': u\'qGnLg6jsu1E\'}, {u\'_version_\': 1533987135413026816, u\'begin\': 2838, u\'content\': [u"Ankara\'n\\u0131n g\\xfcndeminde g\\xfcnlerdir be\\...\\u0131t bizzat cumhurba\\u015fkan\\u0131ndan geldi", u\'maliyeti 240 bin lira olarak ifade edilen su yemek masas\\u0131 var ya\', u\'yemek masas\\u0131 var ya sitelerdeki Biz ustam\\u0131z taraf\\u0131ndan 4600 lira art\\u0131 KDV\', u"art\\u0131 KDV Siz portatif tabla suntadan yap\\...ar Say\\u0131n Demirel\'in Cumhurba\\u015fkan\\u0131", u"Say\\u0131n Demirel\'in Cumhurba\\u015fkanl\\u0131...do\\u011fan maliyeti bizzat a\\xe7\\u0131klad\\u0131", u"Yi\\u011fit bizzat a\\xe7\\u0131klad\\u0131 \\xdcst... Siteler esnaf\\u0131na yapt\\u0131r\\u0131lan masa", u\'i\\u015f\\xe7i taraf\\u0131ndan yapt\\u0131r\\u0131...u011fu yemeklerden her davetlinin cumhurba\\u015f\', u\'her davetlinin cumhurba\\u015fkan\\u0131yla Ayn\\...umhurba\\u015fkanl\\u0131\\u011f\\u0131 K\\xfclliyesi\', u\'Cumhurba\\u015fkanl\\u0131\\u011f\\u0131 k\\xfclliy...lar\\u0131 taraf\\u0131ndan kullan\\u0131l\\u0131yor\', u\'Ba\\u015fkanl\\u0131\\u011f\\u0131 taraf\\u0131ndan...ira maliyeti oldu\\u011fu iddia edilen dekorlarda\', u\'edilen dekorlar da yine bir \\xf6nceki d\\xf6nem... maliyet s\\xf6z konusu de\\u011fil yemekte kullan\', u"yemekte kullan\\u0131lan \\xe7atal b\\u0131\\xe7ak...u015fkanl\\u0131\\u011f\\u0131 D\\xf6nemi\'nden kalma", u"yani tabak \\xe7atal b\\u0131\\xe7ak gibi t\\xfcm ...\\u0131 k\\xfclliyesine ta\\u015f\\u0131nd\\u0131 435", u\'435 bin lira oldu\\u011fu iddia edilen masan\\u0...d\\xfc\\u011f\\xfcn\\xfcz Say\\u0131n Abdullah G\\xfcl\', u"Say\\u0131n Abdullah G\\xfcl\'\\xfcn Cumhurba\\u015...le bir maliyet yok hatta cumhurba\\u015fkan\\u0131", u"Hatta Cumhurba\\u015fkanl\\u0131\\u011f\\u0131 ba\\...l\'in Abdullah G\\xfcl d\\xf6nemlerine ili\\u015fkin", u"Abdullah G\\xfcl d\\xf6nemlerine ili\\u015fkin d\\...7atal b\\u0131\\xe7ak t\\xfcr\\xfc hi\\xe7bir m\\u0131", u\'b\\u0131\\xe7ak t\\xfcr\\xfc Hi\\xe7bir malzeme yok...\\u0131\\u015f sen onlarla devam ediyoruz yemekler\', u\'yemekler k\\xfclliyenin a\\u015f\\xe7\\u0131lar\\u0...131 yeme\\u011fin ve masan\\u0131n haz\\u0131rlanma\', u\'yeme\\u011finde masan\\u0131n haz\\u0131rlanmas\\u...0131r ki\\u015fi ba\\u015f\\u0131 yemek maliyeti de\', ...], u\'end\': 3072, u\'id\': u\'34\', u\'topic\': u\'be\\u015ftepedeki iftar\', u\'youtube\': u\'qGnLg6jsu1E\'}, {u\'_version_\': 1533987135417221120, u\'begin\': 4454, u\'content\': [u\'Bir teknoloji haberi daha \\u0130ronik i\\u015ft...irketlerle sistemlerle payla\\u015f\\u0131yoruz ya\', u\'sistemlerle payla\\u015f\\u0131yoruz ya iyi mi e... zaman o bilgileriniz ne kadar g\\xfcvende oluyor\', u"T\\xfcrkiye\'de kullan\\u0131lan Siber g\\xfcvenli...ik \\xdcniversitesi\'nde kurulan Sibel G\\xfcvenlik", u\'neticesinde kurulan Siber g\\xfcvenlik ve biyom...cretimin yapacak biyometri ile ilgili olan cihaz\', u\'geometri ile ilgili olan cihazlar\\u0131n Evet ...nlerin iletilmesine y\\xf6nelik standartlar\\u0131\', u"iletilmesine y\\xf6nelik standartlar\\u0131nda m... ki \\xfcretecek firmalar nas\\u0131l bir \\u015fey", u\'b\\xf6cek firmalar nas\\u0131l bir \\u015fey \\xfc...015eu an i\\xe7in 10 ki\\u015filik bir ekip \\xe7al\', u\'\\u015eu an i\\xe7in 10 ki\\u015filik bir ekip \\x...31\\u011f\\u0131 g\\xfcvenlik a\\xe7\\u0131klar\\u0131\', u\'\\u0130ris tan\\u0131ma y\\xfcz tan\\u0131ma ve pa...lerinde a\\xe7\\u0131klar\\u0131 olabilir i\\u015fte\', u\'i\\u015flemlerinde a\\xe7\\u0131klar\\u0131 olabil... yeni teknolojik \\xe7al\\u0131\\u015fmalar yapacak\', u\'\\xe7al\\u0131\\u015fmalar yapacak biri bankadan ...ir yere girerken parmak izinizi okuttu\\u011funuz\', u\'parmak izinizi okuttu\\u011funuz pasaporttan ge...ve bu a\\xe7\\u0131kl\\u0131\\u011f\\u0131 nas\\u0131l\', u\'Turbo \\xe7\\u0131kt\\u0131\\u011f\\u0131n nas\\u013...g\\xfcmr\\xfck kap\\u0131lar\\u0131ndan ge\\xe7enleri\', u\'g\\xfcmr\\xfck kap\\u0131lar\\u0131ndan ge\\xe7enle...r\\xfclebiliyor \\u015fimdi kurtarma kameray\\u0131\', u\'\\u015fimdi Termal kameray\\u0131 biyometrik sis...sayar\\u0131 kullanarak birle\\u015ftirdi\\u011fini\', u\'birle\\u015ftirdi\\u011finiz zaman ki\\u015fi \\u0...31ras\\u0131 de\\u011fi\\u015fecektir onu kameradan\', u\'i\\xe7eceksin onu kameradan analiz etme \\u015fa...e hem Arge \\xe7al\\u0131\\u015fmalar\\u0131 yapacak\', u\'hem Arge \\xe7al\\u0131\\u015fmalar\\u0131 yapacak...cek firmalarla destekleme Asl\\u0131nda bulunacak\'], u\'end\': 4599, u\'id\': u\'43\', u\'topic\': u\'siber g\\xfcvenlik\', u\'youtube\': u\'qGnLg6jsu1E\'}, {u\'_version_\': 1533987135411978240, u\'begin\': 2101, u\'content\': [u\'Usta Gazeteci C\\xfcneyt arcay\\xfcrek son yolcu...xfck ustalar\\u0131ndan Duayen Gazeteci C\\xfcneyt\', u"ustalar\\u0131ndan Duayen Gazeteci C\\xfcneyt ar...lama t\\xf6reni yap\\u0131lmad\\u0131 Maltepe Camii", u"lahmacun yap\\u0131lmad\\u0131 Maltepe Camii\'nde...y\\xfcre\\u011fi taziye dileklerini sunan ilk isim", u"taziye dileklerini sunan ilk isim ge\\xe7ici me...crek i\\xe7in Son Mohikan ifadesini kulland\\u0131", u\'suland\\u0131 gazetecilik anlay\\u0131\\u015f\\u0131 hakim olan de\\u011ferler\', u\'ve de\\u011ferler \\xe7ok k\\xf6t\\xfc bir de\\u011...5fmemi\\u015f gibi ayn\\u0131 do\\u011frultuda para\', u\'karanl\\u0131kla mesleki \\xe7al\\u0131\\u015fmala...11flum bu tutumunun alt\\u0131nda b\\xfcy\\xfck bir\', u"b\\xfcy\\xfck bir ahlak anlay\\u0131\\u015f\\u0131 ...1\\u011f\\u0131 t\\xf6rende meslekta\\u015flar\\u0131", u\'Senin de kat\\u0131ld\\u0131\\u011f\\u0131 t\\xf6re...131 da yaln\\u0131z b\\u0131rakmad\\u0131 \\xe7eviri\', u"C\\xfcneyt babayi\\u011fit Ankara\'da Y\\u0131llar... kovalarken Biz de onun pe\\u015finden ko\\u015far", u\'siz onun pe\\u015finden ko\\u015fan aslan olsun diye\', u\'18 ya\\u015f\\u0131nda bir muhabir de \\xf6yle ba...li\\u011fe Ondan sonra tabii zor onlar yapt\\u0131\', u\'yazarl\\u0131k yapt\\u0131\\u011f\\u0131 hat\\u0131...0131 yaparken de beni hi\\xe7 b\\u0131rakmad\\u0131\', u"beni hi\\xe7 b\\u0131rakmad\\u0131 Cumhuriyet gaz...getirdi duygular\\u0131n\\u0131 Hele bug\\xfcnk\\xfc", u\'getirdi duygular\\u0131n\\u0131 gazeteci olarak\', u"zengin bir gazeteci olarak ya\\u015fad\\u0131\\u0...ba\\u015f\\u0131 il\\xe7esinde topra\\u011fa verildi"], u\'end\': 2234, u\'id\': u\'33\', u\'topic\': u\'C\\xfcneyt Arcay\\xfcrek\', u\'youtube\': u\'qGnLg6jsu1E\'}, {u\'_version_\': 1533987135403589632, u\'begin\': 911, u\'content\': [u\'Gelin koalisyon meselesine ge\\xe7elim\', u\'Art\\u0131k yava\\u015f yava\\u015f Cumhurba\\u015...a koalisyon kurulu\\u015f bir an \\xf6nce yazarken\', u\'bir an \\xf6nce Erken se\\xe7im Meclis yap\\u0131...1 i\\xe7inde en k\\u0131sa s\\xfcrede bir koalisyon\', u\'bir koalisyon h\\xfck\\xfcmetinin \\xe7\\u0131kmas...erimiz onlar\\u0131n genel ba\\u015fkanlar\\u0131na\', u"onlar\\u0131n genel ba\\u015fkanlar\\u0131na b\\xf...tan bir koalisyon h\\xfck\\xfcmetine ihtiyac\\u0131", u\'koalisyon h\\xfck\\xfcmetine ihtiyac\\u0131 cumhu...ltusunda hareket etmeye \\xf6n a\\xe7\\u0131c\\u0131\', u\'en a\\xe7\\u0131c\\u0131 te\\u015fvik edici olmaya...11fumuz kritik d\\xf6nem K\\xfc\\xe7\\xfc\\u011f\\xfcm\', u\'kritik d\\xf6nem h\\xfck\\xfcmet meselesinin bir ...erimiz bu konuda \\xfczerlerine d\\xfc\\u015fenleri\', u\'bu konuda \\xfczerlerine d\\xfc\\u015fenleri yapm...1na bak\\u0131p T\\xfcrkiye s\\u0131k\\u0131nt\\u0131\', u\'T\\xfcrkiye s\\u0131k\\u0131nt\\u0131ya d\\xfc\\u015...kip ediyoruz kendi \\xe7\\u0131karlar\\u0131n\\u0131\', u\'kendi \\xe7\\u0131karlar\\u0131n\\u0131 \\xfclkenin...esinin gayet iyi fark\\u0131nday\\u0131z in\\u015fa\', u\'\\u0130n\\u015fallah en k\\u0131sa s\\xfcrede yeni...da se\\xe7imlere yenileyerek bu heves sahiplerini\', u\'deve sahiplerine bir kez daha h\\xfcsrana hep birlikte oluruz zaten\', u"Kayseri olmazsa h\\xfck\\xfcmet olacak Ankara\'n\\u0131n adresi", u"Ankara\'n\\u0131n ibresi en me\\u015fhur ibre bak...yana hangi koalisyondan haberlerine bakal\\u0131m", u"bu uzla\\u015fma k\\xfclt\\xfcr\\xfc hangi adayda ...xfc\\u011f\\xfcm\\xfcz i\\xe7in Say\\u0131n DenizBank", u"D\\xfczi\\xe7i Say\\u0131n Deniz baykal\'a arkada\\...fkan\\u0131 aday\\u0131 Antalya milletvekili Deniz", u"Antalya milletvekili Deniz Baykal\'\\u0131n ba\\u...nt G\\xf6k meclis genel sekreterli\\u011fine sundu", u"alt\\u0131nda son turda birle\\u015ftirecek kend... Ekmeleddin \\u0130hsano\\u011flu\'nu destekleyecek", u\'elektriksel oldu\\u011funu destekleyeceklerini alt\\u0131n\\u0131 \\xe7izdi milletvekilleri\', ...], u\'end\': 1820, u\'id\': u\'30\', u\'topic\': u\'koalisyon\', u\'youtube\': u\'qGnLg6jsu1E\'}, {u\'_version_\': 1533987135380520960, u\'begin\': 19, u\'content\': [u"Rus jetlerinin Suriye\'ye d\\xfczenledi\\u011fi h...ar\\u0131nda \\xe7ocuklar\\u0131n bulundu\\u011fu 17", u"\\xe7ocuklar\\u0131n bulundu\\u011fu 17 sivil ki\\...31 sava\\u015f u\\xe7aklar\\u0131 Suriye\'nin kuzeyi", u"Rus sava\\u015f u\\xe7aklar\\u0131 Suriye\'nin kuz...i Sivil Savunma ekiplerinden al\\u0131nan bilgiye", u"Sivil Savunma ekiplerinden al\\u0131nan bilgiye...1\\u011f\\u0131 hava sald\\u0131r\\u0131s\\u0131nda 8", u\'hava sald\\u0131r\\u0131s\\u0131nda sekizi \\xf6\\u...\\u0131n\\u0131 kaybeden 17 ki\\u015fiden sekizi ne\', u\'kaybeden 17 ki\\u015fiden sekizinin \\xf6\\u011fr...yn\\u0131 ailenin fertleri oldu\\u011fu kaydedildi\', u\'Sivil Savunma ekiplerinin arama kurtarma \\xe7a...ar\\u0131n durumunun a\\u011f\\u0131r oldu\\u011funu\', u\'yaral\\u0131lar\\u0131n durumunun a\\u011f\\u0131r...r\\u0131n\\u0131n artabilece\\u011fini dile getirdi\'], u\'end\': 78, u\'id\': u\'14\', u\'topic\': u\'rus jetleri\', u\'youtube\': u\'I4BmGPvbx0I\'}], u\'numFound\': 34, u\'start\': 20}, u\'responseHeader\': {u\'QTime\': 1, u\'params\': {u\'indent\': u\'true\', u\'q\': u\'ve\', u\'start\': u\'20\', u\'wt\': u\'json\'}, u\'status\': 0}}'
+p307
+sS'IMG'
+p308
+S"<class 'gluon.html.IMG'>"
+p309
+sS'SQLTABLE'
+p310
+S"<class 'gluon.sqlhtml.SQLTABLE'>"
+p311
+sS'IS_MATCH'
+p312
+S"<class 'gluon.validators.IS_MATCH'>"
+p313
+sS'IS_ALPHANUMERIC'
+p314
+S"<class 'gluon.validators.IS_ALPHANUMERIC'>"
+p315
+sS'SPAN'
+p316
+S"<class 'gluon.html.SPAN'>"
+p317
+sS'IS_JSON'
+p318
+S"<class 'gluon.validators.IS_JSON'>"
+p319
+sS'IS_IPADDRESS'
+p320
+S"<class 'gluon.validators.IS_IPADDRESS'>"
+p321
+sS'IS_SLUG'
+p322
+S"<class 'gluon.validators.IS_SLUG'>"
+p323
+sS'BEAUTIFY'
+p324
+S"<class 'gluon.html.BEAUTIFY'>"
+p325
+sS'META'
+p326
+S"<class 'gluon.html.META'>"
+p327
+sS'BUTTON'
+p328
+S"<class 'gluon.html.BUTTON'>"
+p329
+sS'IS_DATE'
+p330
+S"<class 'gluon.validators.IS_DATE'>"
+p331
+sS'IS_EMAIL'
+p332
+S"<class 'gluon.validators.IS_EMAIL'>"
+p333
+sS'IS_NOT_EMPTY'
+p334
+S"<class 'gluon.validators.IS_NOT_EMPTY'>"
+p335
+sS'IS_FLOAT_IN_RANGE'
+p336
+S"<class 'gluon.validators.IS_FLOAT_IN_RANGE'>"
+p337
+sS'TBODY'
+p338
+S"<class 'gluon.html.TBODY'>"
+p339
+sS'CAT'
+p340
+S"<class 'gluon.html.CAT'>"
+p341
+sS'Field'
+p342
+S"<class 'pydal.objects.Field'>"
+p343
+sS'IS_LIST_OF_EMAILS'
+p344
+S"<class 'gluon.validators.IS_LIST_OF_EMAILS'>"
+p345
+sS'DIV'
+p346
+S"<class 'gluon.html.DIV'>"
+p347
+sS'LEGEND'
+p348
+S"<class 'gluon.html.LEGEND'>"
+p349
+sS'COLGROUP'
+p350
+S"<class 'gluon.html.COLGROUP'>"
+p351
+sS'DAL'
+p352
+S"<class 'pydal.base.DAL'>"
+p353
+sS'ASSIGNJS'
+p354
+S'<function ASSIGNJS>'
+p355
+sS'TR'
+p356
+S"<class 'gluon.html.TR'>"
+p357
+sS'LI'
+p358
+S"<class 'gluon.html.LI'>"
+p359
+sS'TH'
+p360
+S"<class 'gluon.html.TH'>"
+p361
+sS'search_response'
+p362
+S'<addinfourl at 140194049741024 whose fp = <socket._fileobject object>>'
+p363
+sS'TD'
+p364
+S"<class 'gluon.html.TD'>"
+p365
+sS'PluginManager'
+p366
+S"<class 'gluon.tools.PluginManager'>"
+p367
+sS'IS_URL'
+p368
+S"<class 'gluon.validators.IS_URL'>"
+p369
+sS'A'
+S"<class 'gluon.html.A'>"
+p370
+sS'HEAD'
+p371
+S"<class 'gluon.html.HEAD'>"
+p372
+sS'IS_DATETIME_IN_RANGE'
+p373
+S"<class 'gluon.validators.IS_DATETIME_IN_RANGE'>"
+p374
+sS'FORM'
+p375
+S"<class 'gluon.html.FORM'>"
+p376
+sS'I'
+S"<class 'gluon.html.I'>"
+p377
+sS'IS_NOT_IN_DB'
+p378
+S"<class 'gluon.validators.IS_NOT_IN_DB'>"
+p379
+sg124
+S"<Storage {'body': <cStringIO.StringO object at 0... 0x7f819045fd70>, 'view': 'default/search.html'}>"
+p380
+sS'THEAD'
+p381
+S"<class 'gluon.html.THEAD'>"
+p382
+sS'ANY_OF'
+p383
+S"<class 'gluon.validators.ANY_OF'>"
+p384
+sS'IS_NULL_OR'
+p385
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p386
+sg55
+S"<Storage {'_vars': <Storage {'searchQuery': 've'...sa\\xc3\\xbcst\\xc3\\xbc/web2py/applications/nlpp/'}>"
+p387
+sS'IS_EXPR'
+p388
+S"<class 'gluon.validators.IS_EXPR'>"
+p389
+sS'T'
+S'<gluon.languages.translator object>'
+p390
+sS'IS_IN_SET'
+p391
+S"<class 'gluon.validators.IS_IN_SET'>"
+p392
+sS'IS_UPLOAD_FILENAME'
+p393
+S"<class 'gluon.validators.IS_UPLOAD_FILENAME'>"
+p394
+sS'TT'
+p395
+S"<class 'gluon.html.TT'>"
+p396
+sS'IS_DECIMAL_IN_RANGE'
+p397
+S"<class 'gluon.validators.IS_DECIMAL_IN_RANGE'>"
+p398
+sssS'traceback'
+p399
+S'Traceback (most recent call last):\n  File "/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/aysedlk/Masa\xc3\xbcst\xc3\xbc/web2py/applications/nlpp/views/default/search.html", line 18, in <module>\nKeyError: 0\n'
+p400
+s.

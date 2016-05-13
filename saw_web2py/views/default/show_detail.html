@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search and Watch</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,400italic,600,300italic,300|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="{{=URL('static/template','css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{=URL('static/template','css/font-awesome.min.css')}}" rel="stylesheet">
+
+    <link href="{{=URL('static/template','css/owl.carousel.css')}}" rel="stylesheet">
+    <link href="{{=URL('static/template','css/owl.theme.css')}}" rel="stylesheet">
+    <link href="{{=URL('static/template','css/owl.transitions.css')}}" rel="stylesheet">
+
+    <link href="{{=URL('static/template','css/style.css')}}" rel="stylesheet">
+
+  </head>
+
+<section class="blog" id="blog" style="margin-top: -50px;">
+            <div class="container">
+            <div class="row">
+                    <div class="col-md-12">
+		    <a href="{{=URL('default','index')}}">
+                        <div class="section-title st-center">
+                            <h3>Search and Watch</h3>
+                            <p>...</p>
+                        </div></a>
+                    </div>
+                </div>
+
+
+                <center>
+                {{s=search_result['response']['docs'][0]['begin']}}
+                {{e=search_result['response']['docs'][0]['end']}}
+                <div class="row" style="margin-bottom: 40px">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{=search_result['response']['docs'][0]['youtube']}}?rel=0&start={{=s}}&end={{=e}}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </center>
+                
+                <div class="row">
+                
+                    <div class="col-md-12">
+                        <div class="blog-post">
+                            <h2 class="post-title">{{=search_result['response']['docs'][0]['topic'].title()}}</h2>
+                            <div class="post-thumb"><a href="#"></a></div>
+                            <div class="post-content">
+                                <p> {{=" ".join(search_result['response']['docs'][0]['content'])}} 
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
