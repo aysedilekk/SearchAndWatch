@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search and Watch</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,400italic,600,300italic,300|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="{{=URL('static/template','css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{=URL('static/template','css/font-awesome.min.css')}}" rel="stylesheet">
+
+
+    <link href="{{=URL('static/template','css/owl.carousel.css')}}" rel="stylesheet">
+    <link href="{{=URL('static/template','css/owl.theme.css')}}" rel="stylesheet">
+    <link href="{{=URL('static/template','css/owl.transitions.css')}}" rel="stylesheet">
+
+    <link href="{{=URL('static/template','css/style.css')}}" rel="stylesheet">
+
+  </head>
+
+<section class="blog" id="blog" style="margin-top: -50px;">
+            <div class="container">
+            <div class="row">
+                    <div class="col-md-12">
+			<a href="{{=URL('default','index')}}">
+                        <div class="section-title st-center">
+                            <h3>Search and Watch</h3>
+                            <p>Search Results[{{=search_result['response']['numFound']}}]
+                            </p>
+                        </div></a>
+                    </div>
+                </div>
+		
+		<center>
+                <div class="row">
+                    <div class="col-md-12">
+
+                {{for result in search_result['response']['docs']:}}
+                        <div class="blog-post">
+                            <div class="post-thumb">
+
+                            </div>
+                            <div class="post-content">
+                                <p>{{=" ".join(result['content'])[:300]}}.. <a href="{{=URL('show_detail', args=result['id'])}}" class="more-link">Read more.. <span class="meta-nav">&rarr;</span></a></p>
+                            </div>
+                        </div>
+                        {{pass}}
+                    </div>
+		    
+
+
+            <nav>
+            <ul class="pagination pagination-sm">
+                {{import math}} {{for i in range(int(math.ceil(search_result['response']['numFound']/10.0))):}}
+                <li {{if i==request.args(0, cast=int)-1:}} class="active" {{pass}}>
+                    <a href="{{=URL('default', 'search', args=i+1)}}?searchQuery={{=request.vars.searchQuery}}{{if request.vars.category:}}&category={{=request.vars.category}}{{pass}}">{{=i+1}}</a>
+                </li>
+                {{pass}}
+
+            </ul>
+        </nav>
+</center>
+
+                    
+                </div>
+            </div>
+        </section>
