@@ -1,7 +1,7 @@
 
 # Search and Watch
 This project is releated to Natural Languages Processing and Information Retrieval. 
-The aim of this project is to convert the audio of news videos to text. After splitting the text with using topic detection, searching part will be done. According to searching term, releated part of new video will be opened.
+It consist of two parts.The aim of first part is converting the audio of news videos to text and splitting the text with using topic detection.The aim of second part is creating search engine and indexing the first part's text. To result, according searching term in search engine interface, its text will come and releated part of new video will be opened.
 
 ##Requirements
 
